@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2-2</title>
+    <style>
+        .numselect {
+            width: 80px
+        }
+
+        input {
+            padding: 3px 5px;
+            width: 250px;
+        }
+        select {
+            padding: 3px 5px;
+        }
+        button {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="filmName">Название фильма:</label><br>
+        <input id="filmName" type="text" placeholder="Название фильма">
+    </div>
+    <table>
+        <tr>
+            <td><label for="film">Кинотеатры:</label></td>
+            <td><label>Время:</label></td>
+        </tr>
+        <tr>
+            <td><select id="film">
+                <option>Кинотеатр Paramount City</option>
+                <option>Кинотеатр Kinopark 13</option>
+            </select></td>
+            <td><select class="numselect" id="hours" name="hours"></select></td>
+            <td><select class="numselect" id="minutes" name="minutes"></select></td>
+        </tr>
+    </table>
+    <button>Поиск фильма</button>
+    <script>
+        const hours = document.getElementById("hours");
+        for (var i = 0; i <= 23; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.text = i < 10 ? `0${i}` : i;
+            hours.appendChild(option);
+        }
+
+        const minutes = document.getElementById("minutes");
+        for (var i = 0; i <= 59; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.text = i < 10 ? `0${i}` : i;
+            minutes.appendChild(option);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2-3</title>
+    <style>
+        body {
+            font-family: verdana;
+        }
+        div {
+            align-items: center;
+            margin: 5px;
+        }
+
+
+        #header {
+            display: flex;
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
+            justify-content: space-between;
+        }
+
+        #welcome {
+            background-color: gray;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        #ourproducts {
+            background-color: white;
+            text-align: center;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        #products {
+            display: flex;
+        }
+
+        #copyright {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product {
+            border: 1px solid;
+        }
+
+        a {
+            color: gray;
+            text-decoration: none;
+        }
+        a:active {
+            color: white;
+        }
+
+        p, button {
+            padding-left: 5px;
+            margin: 5px;
+        }
+
+        .price {
+            color: gold;
+            text-size: 20px;
+        }
+
+        button {
+            padding: 5px 5px 5px 5px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <span id="header-left"><b>BATLIB</b> Shop</span>
+        <span id="header-right">
+            <a href="https://google.com">Laptops</a>
+            <a href="https://google.com">Phones</a>
+            <a href="https://google.com">Printers</a>
+        </span>
+    </div>
+    <div id="welcome">
+        <span style="font-size: 30px;">Hello and welcome to the BATLIB shop!</span>
+    </div>
+    <div id="ourproducts">
+        <span>Our products:</span>
+    </div>
+    <div id="products">
+        <div class="product">
+            <img src="computer.jpg" alt="Computer" width="200px">
+            <p>Computer 1</p>
+            <p class="price">$499.99</p>
+            <button>Buy now!</button>
+        </div>
+        <div class="product">
+            <img src="computer.jpg" alt="Computer" width="200px">
+            <p>Computer 2</p>
+            <p class="price">$399.99</p>
+            <button>Buy now!</button>
+        </div>
+        <div class="product">
+            <img src="computer.jpg" alt="Computer" width="200px">
+            <p>Computer 3</p>
+            <p class="price">$299.99</p>
+            <button>Buy now!</button>
+        </div>
+        <div class="product">
+            <img src="computer.jpg" alt="Computer" width="200px">
+            <p>Computer 4</p>
+            <p class="price">$699.99</p>
+            <button>Buy now!</button>
+        </div>
+        <div class="product">
+            <img src="computer.jpg" alt="Computer" width="200px">
+            <p>Computer 5</p>
+            <p class="price">$799.99</p>
+            <button>Buy now!</button>
+        </div>
+    </div>
+    <div id="copyright">
+        <span style="font-size: 15px; ">Copyright (c) Developed by BATLIB Team. All Rights Reserved.</span>
+    </div>
+</body>
+</html>

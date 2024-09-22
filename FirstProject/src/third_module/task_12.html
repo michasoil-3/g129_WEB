@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1-2</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Тип булочки:</td>
+                <td><select name="bunType">
+                    <option>Булочки для гамбургеров</option>
+                    <option>Хлеб для сэндвичев</option>
+                    <option>Багет</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Тип мяса:</td>
+                <td><select name="meatType">
+                    <option>Говядина</option>
+                    <option>Курица</option>
+                    <option>Баранина</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Опции:</td>
+                <td><input type="checkbox" name="hasKetchup">Кетчуп<br>
+                    <input type="checkbox" name="hasMayo">Майонез<br>
+                    <input type="checkbox" name="hasTomato">Помидор<br>
+                    <input type="checkbox" name="hasPickles">Солёные огурци</td>
+            </tr>
+            <tr>
+                <td>Адрес:</td>
+                <td><input type="text" placeholder="Введите адрес..." name="address"></td>
+            </tr>
+            <tr>
+                <td>Ф.И.О. заказчика:</td>
+                <td><input type="text" placeholder="Введите Ф.И.О...." name="fullName"></td>
+            </tr>
+            <tr>
+                <td>Желаемое время заказчика:</td>
+                <td><input type="datetime-local" name="preferredDeliveryTime"></td>
+            </tr>
+            <tr>
+                <td>Выбор бургера:</td>
+                <td><select name="burgerType">
+                    <option>Говядина</option>
+                    <option>Курица</option>
+                    <option>Баранина</option>
+                </select></td>
+            </tr>
+        </tbody>
+    </table>
+    <button>Заказать</button>
+</body>
+</html>
