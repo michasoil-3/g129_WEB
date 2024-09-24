@@ -1,0 +1,90 @@
+body {
+    font-family: Roboto, ui-serif;
+}
+.header {
+    align-items: center;
+    display: flex;
+    background-color: burlywood;
+    padding: 2px 4px;
+    justify-content: space-between;
+}
+
+.featuredArticle {
+    align-items: center;
+    display: flex;
+    background-color: brown;
+    height: 450px;
+}
+
+.imageWithText {
+    background-color: darkgray;
+    border: 2px solid darkred;
+}
+
+.imageWithText > p {
+    margin-top: 2px;
+    width: 400px;
+    font-style: italic;
+    color: white;
+}
+
+.featuredArticle > .dominantText {
+    margin: 4px;
+}
+
+.suspenseHolder {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    height: 60px;
+}
+
+.readMore {
+    display: flex;
+    justify-content: space-between;
+    background: darkblue;
+}
+
+.otherArticle {
+    border: 2px solid yellow;
+    background-color: orange;
+    width: 400px;
+}
+
+.otherArticle > p {
+    margin: 4px;
+}
+
+.otherArticle > img {
+    width: 400px;
+}
+
+.centerButton {
+    display: block;
+    margin: 0 auto;
+}
+
+.otherArticle > button {
+    width: 100px;
+    height: 40px;
+    background-color: darkorange;
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+a:active {
+    color: white;
+}
