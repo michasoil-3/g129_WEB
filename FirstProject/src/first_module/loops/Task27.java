@@ -1,0 +1,15 @@
+package first_module.loops;
+
+import java.util.Scanner;
+
+public class Task27 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        double sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += (double) 1 / (i + 1);
+        }
+        System.out.println(sum);
+    }
+}
