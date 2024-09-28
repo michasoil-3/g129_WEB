@@ -1,0 +1,41 @@
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: #006087;
+}
+.header {
+    display: flex;
+    background-color: #001987;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header > p {
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.header > input {
+    margin: 10px;
+    color: black;
+}
+
+.mainDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainDiv > div {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    padding: 10px;
+    background-color: gray;
+}
+
+.friendsDiv {
+    display: flex;
+    wrap-option: wrap;
+    justify-content: center;
+}
