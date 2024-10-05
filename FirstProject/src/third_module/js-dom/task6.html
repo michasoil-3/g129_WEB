@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .complain {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br>
+    <span class="complain" id="emailComplain"><p>E-mail is already in use.</p><br></span>
+    <label for="password">Password</label>
+    <input type="password" id="password"><br>
+    <span class="complain" id="passwordComplain"><p>E-mail is already in use.</p><br></span>
+    <label for="confirmPassword">Confirm password:</label>
+    <input type="password" id="confirmPassword">
+    <span class="complain" id="confirmPasswordComplain"><p>E-mail is already in use.</p><br></span>
+  </div>
+  <button id="button" type="button">Login</button>
+  <p id="success" style="color: green; display: none;">You have successfully signed up. Please check your email for a confirmation link.</p>
+  <script>
+    const usedAddresses = [
+            "ilyas@gmail.com",
+            "martin@gmail.com",
+            "jonathan@gmail.com",
+            "jessica@yahoo.com",
+            "gilbert@aol.com"
+    ]
+    button.addEventListener("click", () => {
+      let hasFailed = false
+      emailParts = email.value.trim().split("@")
+      if (emailParts.length !== 2) {
+        emailComplain.innerHTML = "Invalid e-mail."
+        emailComplain.style.display = "block"
+        hasFailed = true
+      } else if (usedAddresses.indexOf(email.value.trim()) !== -1) {
+        emailComplain.innerHTML = "E-mail already in use."
+        emailComplain.style.display = "block"
+        hasFailed = true
+      } else if (email.value.trim().indexOf("@") === -1 || emailParts[1].indexOf(".") === -1) {
+        emailComplain.innerHTML = "E-mail is invalid."
+        emailComplain.style.display = "block"
+        hasFailed = true
+      } else emailComplain.style.display = "none"
+
+      let passwordValue = password.value
+      if (passwordValue.length < 6) {
+        passwordComplain.innerHTML = "Password must be at least 6 characters long"
+        passwordComplain.style.display = "block"
+        hasFailed = true
+      } else passwordComplain.style.display = "none"
+
+      let passwordRetype = confirmPassword.value
+      if (passwordValue !== passwordRetype) {
+        confirmPasswordComplain.innerHTML = "Passwords don't match"
+        confirmPasswordComplain.style.display = "block"
+        hasFailed = true
+      }
+      if (!hasFailed)
+        success.style.display = "block"
+      else
+        success.style.display = "none"
+    })
+  </script>
+</body>
+</html>

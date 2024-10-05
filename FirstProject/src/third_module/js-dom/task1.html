@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div id="authorisation-form">
+    <label for="login">Login:</label>
+    <input id="login" name="login" type="text"><br>
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password"> <br>
+    <button id="button">Authorise</button>
+  </div>
+  <p id="message" style="display: none;">You are authorised.</p>
+  <script>
+    const form = document.getElementById("authorisation-form")
+    button.addEventListener("click", function() {
+      if (login.value !== "admin" || password.value !== "qwerty") {
+        login.style.borderColor = "red"
+        password.style.borderColor = "red"
+      } else {
+        form.style.display = "none"
+        message.style.display = "block"
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    div > button {
+      margin: 4px 10px;
+      border: none;             /* removes border */
+      padding: 0;               /* removes padding */
+      background: none;         /* removes button's background */
+      cursor: pointer;
+    }
+    div > button > img {
+      width: 80px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img style="justify-self: center" id="bigImg" src="cars/car1.jpg" width="600px" height="400px">
+    <div style="display: flex; flex-direction: row;">
+      <button id="first"><img src="cars/car1.jpg"></button>
+      <button id="second"><img src="cars/car2.jpg"></button>
+      <button id="third"><img src="cars/car3.jpg"></button>
+      <button id="fourth"><img src="cars/car4.jpg"></button>
+      <button id="fifth"><img src="cars/car5.jpg"></button>
+    </div>
+  </div>
+  <script>
+    first.addEventListener("click", function() {
+      bigImg.src = "cars/car1.jpg";
+    })
+    second.addEventListener("click", function() {
+      bigImg.src = "cars/car2.jpg";
+    })
+    third.addEventListener("click", function() {
+      bigImg.src = "cars/car3.jpg";
+    })
+    fourth.addEventListener("click", function() {
+      bigImg.src = "cars/car4.jpg";
+    })
+    fifth.addEventListener("click", function() {
+      bigImg.src = "cars/car5.jpg";
+    })
+  </script>
+</body>
+</html>

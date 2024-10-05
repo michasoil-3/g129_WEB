@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <img id="imageHolder" width="600px">
+    <div>
+        <button style="margin-right: 5px;" id="previousBtn">PREV</button>
+        <button style="margin-left: 5px;" id="nextBtn">NEXT</button>
+    </div>
+    <p>Image credits:</p>
+    <ul>
+        <li>https://www.pexels.com/photo/red-sedan-in-the-middle-of-forest-376361/</li>
+        <li>https://www.pexels.com/photo/toyota-rav4-2036544/</li>
+        <li>https://www.pexels.com/photo/red-coupe-drifting-on-asphalt-road-3608542/</li>
+        <li>https://www.pexels.com/photo/black-vehicle-2405039/</li>
+        <li>https://www.pexels.com/photo/photo-of-montero-sport-parked-on-grass-field-2676096/</li>
+    </ul>
+    <script>
+        let imageNumber = 1
+        imageHolder.src = `cars/car${imageNumber}.jpg`
+
+        previousBtn.addEventListener("click", function() {
+            if (imageNumber === 1 ) imageNumber = 5
+            else imageNumber--
+            imageHolder.src = `cars/car${imageNumber}.jpg`
+        })
+        nextBtn.addEventListener("click", function() {
+            if (imageNumber === 5 ) imageNumber = 1
+            else imageNumber++
+            imageHolder.src = `cars/car${imageNumber}.jpg`
+        })
+    </script>
+</body>
+</html>

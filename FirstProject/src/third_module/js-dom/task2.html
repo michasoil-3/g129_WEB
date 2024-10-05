@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="display: flex;">
+        <button id="minus">-</button>
+        <p id="counter" style="margin-left: 10px; margin-right: 10px"></p>
+        <button id="plus">+</button>
+    </div>
+    <script>
+        let value = 0;
+        counter.innerHTML = value.toString()
+        minus.addEventListener("click", function() {
+            value--
+            counter.innerHTML = value.toString()
+        })
+        plus.addEventListener("click", function() {
+            value++
+            counter.innerHTML = value.toString()
+        })
+    </script>
+</body>
+</html>
