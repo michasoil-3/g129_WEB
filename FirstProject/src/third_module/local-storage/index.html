@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("email", "yedil.bakenov@gmail.com")
+        localStorage.setItem("gpa", "2.2")
+        let email = localStorage.getItem("email")
+        let gpa = localStorage.getItem("gpa")
+        localStorage.removeItem("email")
+        localStorage.removeItem("gpa")
+        console.log(email, gpa)
+        localStorage.name = "John"
+        localStorage.surname = "Doe"
+        let objs = [
+            {name: "hello", hi: "yo"},
+            {name: "hi", hi: "yo"},
+            {name: "hey", hi: "yo"},
+            {name: "greetings", hi: "yo"},
+            {name: "sup", hi: "yo"}
+        ]
+        localStorage.setItem("object", objs)
+        let jsonObj = JSON.stringify(objs)
+        let parsed = JSON.parse(jsonObj)
+        console.log(jsonObj)
+        console.log(parsed)
+    </script>
+</body>
+</html>

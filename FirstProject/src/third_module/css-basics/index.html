@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Roboto, ui-serif;
+        }
+        .header {
+            align-items: center;
+            display: flex;
+            background-color: burlywood;
+            padding: 2px 4px;
+            justify-content: space-between;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: gray;
+        }
+
+        a:active {
+            color: white;
+        }
+
+        #mainDiv {
+            display: flex;
+        }
+        #login {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p><b>BATLIB</b> NEWS</p>
+        <span>
+            <a href="http://google.com">Home</a>
+            <a href="http://google.com">Sports</a>
+            <a href="http://google.com">Culture</a>
+            <a href="http://google.com">Science</a>
+            <a href="http://google.com">Politics</a>
+            <a href="http://google.com">Finance</a>
+        </span>
+    </div>
+    <div id="mainDiv">
+        <div id="login">
+            <label for="username"></label>
+            <input type="text" id="username" name="username"><br>
+
+            <label for="password"></label>
+            <input type="password" id="password" name="username"><br>
+
+        </div>
+        <div id="news"></div>
+        <div id="match"></div>
+    </div>
+</body>
+</html>

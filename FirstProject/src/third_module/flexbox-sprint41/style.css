@@ -1,0 +1,107 @@
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+.header {
+    display: flex;
+    background-color: #001987;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header > p {
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.header > input {
+    margin: 10px;
+    color: black;
+}
+
+.options > a {
+    padding-bottom: 15px;
+}
+
+.options > a:hover {
+    color: lightblue;
+}
+
+.mainDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainDiv > div {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+#tagline {
+    font-style: italic;
+}
+
+/*.friendsDiv {*/
+/*    display: flex;*/
+/*    wrap-option: wrap;*/
+/*    justify-content: center;*/
+/*    margin-left: 5px;*/
+/*}*/
+
+.friendsDiv > div {
+    padding: 5px;
+    border: 1px solid gray;
+    display: flex;
+    wrap-option: wrap;
+    justify-content: center;
+    /*margin-left: 5px;*/
+}
+.friendsDivRow > div {
+    margin-left: 5px;
+}
+
+.mainWall {
+    width: 700px;
+}
+
+.profileView {
+    height: 750px;
+}
+
+#detailsTable {
+    width: 960px;
+}
+
+
+table tr td:nth-child(2) {
+    color: darkblue;
+}
+
+#profileDescription {
+    width: 690px;
+    border: 2px solid gray;
+}
+
+.post {
+    width: 690px;
+    border: 2px solid gray;
+}
+
+.profileTop {
+    background-color: lightgray;
+}
+.profileTop > div > p {
+    font-size: 10px;
+}
+
+.postContent {
+    background-color: white;
+}
+.postContent > div {
+    margin-bottom: 8px;
+}

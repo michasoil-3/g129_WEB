@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <label for="nameInput">NAME:</label>
+        <input type="text" id="nameInput" name="name"><br>
+        <label for="surnameInput">SURNAME:</label>
+        <input type="text" id="surnameInput" name="surname"><br>
+        <label for="countryInput">COUNTRY:</label>
+        <select id="countryInput" name="country">
+            <option>Kazakhstan</option>
+            <option>Russia</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Italy</option>
+            <option>France</option>
+            <option>Canada</option>
+        </select><br>
+        <label for="telNumberInput">PHONE NUMBER:</label>
+        <input type="tel" id="telNumberInput" name="telNumber" pattern="[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="X-XXX-XXX-XXXX"><br>
+    </div>
+    <div style="display: flex;">
+        <button>Register</button>
+        <button id="saveDraft">Save Draft</button>
+    </div>
+    <p id="notifier"></p>
+    <script>
+        saveDraft.addEventListener("click", function() {
+            const nameInput = document.getElementById("nameInput");
+            const surnameInput = document.getElementById("surnameInput");
+            const countryInput = document.getElementById("countryInput");
+            const telNumberInput = document.getElementById("telNumberInput");
+
+            localStorage.setItem("name", nameInput.value.trim())
+            localStorage.setItem("surname", surnameInput.value.trim())
+            localStorage.setItem("country", countryInput.value.trim())
+            localStorage.setItem("telNumber", telNumberInput.value.trim())
+            notifier.innerHTML = "Saved to draft."
+        })
+
+    </script>
+</body>
+</html>

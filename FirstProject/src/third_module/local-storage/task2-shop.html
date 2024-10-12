@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Items</title>
+  <style>
+    .item {
+      display: flex;
+      flex-direction: column;
+      font-family: Verdana,serif;
+      border: 1px solid gray;
+      width: 400px;
+      margin: 3px;
+    }
+    .item > p {
+      margin: 2px 4px;
+    }
+    .item > button {
+      width: 140px;
+    }
+  </style>
+</head>
+<body>
+<div id="main">
+  <div class="item">
+    <p>Samsung Universe S29</p>
+    <p>$899.99</p>
+    <button id="samsungBtn">ADD TO CART</button>
+  </div>
+  <div class="item">
+    <p>TwoPlus</p>
+    <p>$799.99</p>
+    <button id="twoplusBtn">ADD TO CART</button>
+  </div>
+  <div class="item">
+    <p>Banana iPhone</p>
+    <p>$1999.99</p>
+    <button id="bananaBtn">ADD TO CART</button>
+  </div>
+  <div class="item">
+    <p>Sony Xperiment</p>
+    <p>$399.99</p>
+    <button id="sonyBtn">ADD TO CART</button>
+  </div>
+</div>
+<script>
+  localStorage.removeItem("cart")
+  let storage = []
+  const buttons = ["samsungBtn", "twoplusBtn", "bananaBtn", "sonyBtn"]
+  const phones = [
+    ["Samsung Universe S29", 899.99],
+    ["TwoPlus", 799.99],
+    ["Banana iPhone", 1999.99],
+    ["Sony Xperiment", 399.99],
+  ]
+  for (let i = 0; i < phones.length; i++) {
+    const button = document.getElementById(buttons[i])
+    button.addEventListener("click", function() {
+      if (storage.indexOf(phones[i]) === -1) {
+        storage.push(phones[i])
+        console.log(storage)
+        localStorage.setItem("cart", storage)
+      }
+      button.innerHTML = "ADDED TO CART"
+      button.disabled = true
+    })
+  }
+</script>
+</body>
+</html>
